@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class FlowerLogic : AbstractFlower
 {
     public AbstractFlower Flower;
+
     
     public float watering;
 
@@ -27,7 +27,7 @@ public class FlowerLogic : AbstractFlower
             }
         }
     }
-
+    
     private void FixedUpdate()
     {
         water -= waterDec * Time.deltaTime;
@@ -36,7 +36,6 @@ public class FlowerLogic : AbstractFlower
         {
             sun += sunDec * Time.deltaTime;
         }
-        
 
         //Debug.Log(sun.ToString());
 
@@ -44,8 +43,6 @@ public class FlowerLogic : AbstractFlower
         {
             Destroy(gameObject);
         }
-
-
     }
 
     private void keyPressing()
@@ -61,10 +58,20 @@ public class FlowerLogic : AbstractFlower
             Debug.Log("hatch");
             HatchOpen = !HatchOpen;
         }
+        if (Input.GetKey(KeyCode.S))
+        {
+
+        }
     }
 
+    private void Sell(float money)
+    {
+
+    }
     private void Water()
     {
         water += watering;
+        //play animation
     }
+
 }

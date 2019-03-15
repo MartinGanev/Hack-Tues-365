@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class FlowerLogic : AbstractFlower
 {
-    public AbstractFlower Flower;
 
     
     public float watering;

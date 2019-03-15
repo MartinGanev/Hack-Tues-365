@@ -14,7 +14,9 @@ public class AbstractFlower: MonoBehaviour
     public float waterTolerance;
     public float soil_req;
     public float growTime;
+    public float life;
 
+    public bool alive;
     public bool locked;
     public bool Grown;
     public bool nocturnal;

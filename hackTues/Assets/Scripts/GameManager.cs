@@ -40,6 +40,6 @@ public class GameManager : MonoBehaviour
     {
         badEvents[UnityEngine.Random.Range(0, 3)](10, flower);
         Invoke("startBad", UnityEngine.Random.Range(randomStart, randomEnd));
-        Debug.Log("Bad event");
+        //Debug.Log("Bad event");
     }
 }

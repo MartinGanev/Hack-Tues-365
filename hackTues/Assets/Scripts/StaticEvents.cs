@@ -7,16 +7,16 @@ public static class  StaticEvents
     public static void MeteorShower(float power, FlowerLogic flower)
     {
         //flower.life -= power;
-        Debug.Log("met");
+        //Debug.Log("met");
     }
     public static void CosmicRays(float rad, FlowerLogic flower)
     {
 
-        Debug.Log("cos");
+        //Debug.Log("cos");
     }
     public static void SuperNova(float power, FlowerLogic flower)
     {
 
-        Debug.Log("sup");
+        //Debug.Log("sup");
     }
 }

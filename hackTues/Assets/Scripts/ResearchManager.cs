@@ -20,13 +20,15 @@ public class ResearchManager: MonoBehaviour
 
     }
 
-    public void unlockResearch(string resName)
+    public void unlockResearch(Research res)
     {
-        Research foundItem;
-        
-        foundItem = resLock.Find((Research item) => item.name == resName);
-        foundItem.Locked = false;
-        resLock.Remove(foundItem);
-        resUnlock.Add(foundItem);
+        if (Resources.Research >= res.Cost) {
+            Resources.Research -= res.Cost;
+            res.Locked = false;
+
+            resLock.Remove(res);
+            resUnlock.Add(res);
+            Debug.Log("Researched: " + res.name);
+        }
     }
 }

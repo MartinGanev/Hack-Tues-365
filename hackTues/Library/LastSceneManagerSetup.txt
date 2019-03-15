@@ -1,4 +1,4 @@
 sceneSetups:
-- path: C:/Users/Admin/Desktop/UI/Hack-Tues-365/hackTues/Assets/Scenes/ui_scnene.unity
+- path: Assets/Scenes/ui_scnene.unity
   isLoaded: 1
   isActive: 1

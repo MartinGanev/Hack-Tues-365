@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - cactus
+  - tulip
+  - sunflower
   layers:
   - Default
   - TransparentFX

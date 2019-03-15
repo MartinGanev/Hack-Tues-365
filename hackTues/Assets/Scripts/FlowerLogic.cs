@@ -69,7 +69,7 @@ public class FlowerLogic : AbstractFlower
         }
         if (Input.GetKey(KeyCode.S))
         {
-
+            changePlant();
         }
     }
     

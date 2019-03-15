@@ -27,7 +27,6 @@ public class GameManager : MonoBehaviour
     
     void Update()
     {
-        
 
         waitTime += Time.deltaTime;
         

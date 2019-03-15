@@ -9,12 +9,14 @@ public class GameManager : MonoBehaviour
     private float waitTime = 0f;
     private float setTimeToWait = 1.0f;
 
+    public float randomStart, randomEnd;
+
     public float powerOfEvents;
     public FlowerLogic flower;
 
     private void Start()
     {
-        Invoke("startBad", UnityEngine.Random.Range(1, 2));
+        Invoke("startBad", UnityEngine.Random.Range(randomStart, randomEnd));
     }
 
     private Action<float, FlowerLogic>[] badEvents = {
@@ -38,7 +40,7 @@ public class GameManager : MonoBehaviour
     private void startBad()
     {
         badEvents[UnityEngine.Random.Range(0, 3)](10, flower);
-        Invoke("startBad", UnityEngine.Random.Range(1, 2));
+        Invoke("startBad", UnityEngine.Random.Range(randomStart, randomEnd));
         Debug.Log("Bad event");
     }
 }

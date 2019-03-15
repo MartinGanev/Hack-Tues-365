@@ -4,11 +4,20 @@ using UnityEngine;
 
 public class FlowerLogic : AbstractFlower
 {
+    private int index = 0;
 
-    
+    public List<Sprite> sprites;
+    public float resOnDeath;
     public float watering;
 
     private bool hatch;
+
+    private void Start()
+    {
+        changePlant("cactus");
+        Invoke("growSprite", growTime);
+    }
+
     public bool HatchOpen
     {
         get {
@@ -40,7 +49,8 @@ public class FlowerLogic : AbstractFlower
 
         if ((water <= 0 || water >= waterTolerance) || (sun <=0 || sun >= SunTolerance ))
         {
-            Destroy(gameObject);
+            Resources.Research += resOnDeath;
+            //Destroy(gameObject);
         }
     }
 
@@ -61,6 +71,23 @@ public class FlowerLogic : AbstractFlower
         {
 
         }
+    }
+    
+
+    private void changePlant(string plantTag)
+    {
+        sprites = GameObject.FindGameObjectWithTag(plantTag).GetComponent<PlantGrow>().growAnima;
+    }
+
+    private void growSprite()
+    {
+        if(index > (sprites.Count - 1))
+        {
+            return;
+        }
+        GetComponent<SpriteRenderer>().sprite = sprites[index];
+        index++;
+        Invoke("growSprite", growTime);
     }
 
     private void Sell(float money)

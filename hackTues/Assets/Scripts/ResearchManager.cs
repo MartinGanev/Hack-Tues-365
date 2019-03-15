@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class ResearchManager: MonoBehaviour
 {
-    public int resAmount;
     private string[] names = { "Cactus", "Tulip", "Sunflower", "Weed"};
     private int[] level = { 1, 2, 2, 3};
 
-    public static Research[] resUnlock;
-    public static Research[] resLock;
+    public List<Research> resUnlock;
+    public List<Research> resLock;
 
     private void Start()
     {
@@ -21,8 +20,13 @@ public class ResearchManager: MonoBehaviour
 
     }
 
-    public void unlockResearch(Research res)
+    public void unlockResearch(string resName)
     {
-        Research.
+        Research foundItem;
+        
+        foundItem = resLock.Find((Research item) => item.name == resName);
+        foundItem.Locked = false;
+        resLock.Remove(foundItem);
+        resUnlock.Add(foundItem);
     }
 }

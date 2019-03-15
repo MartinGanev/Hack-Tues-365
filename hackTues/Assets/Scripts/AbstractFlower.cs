@@ -16,6 +16,8 @@ public class AbstractFlower: MonoBehaviour
     public float growTime;
     public float life;
 
+    public string plantName;
+
     public bool alive;
     public bool locked;
     public bool Grown;

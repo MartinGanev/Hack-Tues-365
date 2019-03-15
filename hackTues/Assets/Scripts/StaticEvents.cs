@@ -6,7 +6,7 @@ public static class  StaticEvents
 {
     public static void MeteorShower(float power, FlowerLogic flower)
     {
-        
+        //flower.life -= power;
         Debug.Log("met");
     }
     public static void CosmicRays(float rad, FlowerLogic flower)

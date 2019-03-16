@@ -8,9 +8,15 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    
+    [SerializeField]
+    private Bar sunBar;
+    [SerializeField]
+    private Bar watBar;
+    [SerializeField]
+    private Bar radBar;
     private float waitTime = 0f;
     private List<FlowerLogic> flowersInGame = new List<FlowerLogic>();
+    private bool isPressed;
 
     private bool hatch;
 
@@ -22,6 +28,8 @@ public class GameManager : MonoBehaviour
     public float randomStart, randomEnd;
     public float powerOfEvents;
     public ResearchManager ResearchMan;
+
+
 
     [SerializeField]
     private List<GameObject> uiStore;
@@ -70,6 +78,7 @@ public class GameManager : MonoBehaviour
     void FixedUpdate()
     {
 
+
         waitTime += Time.deltaTime;
         
         if (Input.GetKey(KeyCode.F))
@@ -77,59 +86,111 @@ public class GameManager : MonoBehaviour
             badEvents[UnityEngine.Random.Range(0, 3)](10, mainFlower);
         }
 
-        Debug.Log(mainFlower);
+        //Debug.Log(mainFlower);
 
         mainFlower.water -= mainFlower.waterDec * Time.deltaTime;
+        
 
         if (HatchOpen && !mainFlower.nocturnal)
         {
             mainFlower.sun += mainFlower.sunDec * Time.deltaTime;
         }
+        else if(!mainFlower.nocturnal)
+        {
+            mainFlower.sun -= mainFlower.sunDec * Time.deltaTime;
+        }
 
-        //Debug.Log(mainFlower.sun.ToString());
-        //Debug.Log(mainFlower.water.ToString());
 
-        if ((mainFlower.water <= 0 || mainFlower.water >= mainFlower.waterTolerance) || (mainFlower.sun <= 0 || mainFlower.sun >= mainFlower.SunTolerance))
+
+       // Debug.Log(mainFlower.sun.ToString());
+       // Debug.Log(mainFlower.water.ToString());
+
+        if ((mainFlower.water <= 0 || mainFlower.water >= mainFlower.waterTolerance) || (mainFlower.sun <= 0 || mainFlower.sun >= mainFlower.sunTolerance))
         {
             Resources.Research += mainFlower.resOnDeath;
             //Destroy(gameObject);
         }
+
+        keyPressing();
+
+        sunBar.SetBarPercent(toPercent(mainFlower.sun, mainFlower.sunTolerance));
+        watBar.SetBarPercent(toPercent(mainFlower.water, mainFlower.waterTolerance));
+        radBar.SetBarPercent(toPercent(mainFlower.rad, mainFlower.radTolerance));
+    }
+
+    private float toPercent(float current, float max)
+    {
+        return  current/max  * 100;
     }
 
     private void populateUI()
     {
-        int random = UnityEngine.Random.Range(0, ResearchMan.resUnlock.Count);
-        Transform g = uiStore[0].transform.Find("GameObject").Find("Name");
-        
-        Text t = g.gameObject.GetComponent<Text>();
-        t.text = ResearchMan.resUnlock[random].flower.plantName;
-        g = uiStore[1].transform.Find("GameObject").Find("Cost");
-        t = g.gameObject.GetComponent<Text>();
-        float temp = ResearchMan.resUnlock[random].flower.flowerCost;
-        t.text = temp.ToString("N2");
-        
+        float temp;
+        Text t;
+        Transform g;
+        Research unlockedRes;
 
+        int random = UnityEngine.Random.Range(0, ResearchMan.resUnlock.Count);
+        for (int i = 0; i < uiStore.Count; i++)
+        {
+            unlockedRes = ResearchMan.resUnlock[random];
+
+            g = uiStore[i].transform.Find("GameObject").Find("Name");
+            t = g.gameObject.GetComponent<Text>();
+            
+            t.text = unlockedRes.flower.plantName;
+
+            g = uiStore[i].transform.Find("GameObject").Find("GameObject").Find("Cost");
+            t = g.gameObject.GetComponent<Text>();
+            temp = unlockedRes.flower.flowerCost;
+            t.text = temp.ToString("N2");
+
+            g = uiStore[i].transform.Find("Description");
+            t = g.gameObject.GetComponent<Text>();
+            t.text = unlockedRes.Desc;
+
+            uiStore[i].transform.Find("Button").GetComponent<Image>().sprite = ResearchMan.resUnlock[random].Img;
+        }
         //uiStore[0]
     }
 
     private void keyPressing()
     {
-        if (Input.GetKey(KeyCode.W))
+
+        if (Input.GetKey(KeyCode.W) && !isPressed)
         {
+            isPressed = true;
             Debug.Log("water");
             Water();
         }
 
         if (Input.GetKey(KeyCode.Q))
         {
+            isPressed = true;
             Hatch();
             Debug.Log("hatch");
         }
         if (Input.GetKey(KeyCode.S))
         {
+            isPressed = true;
             Sell(15);
             Debug.Log("  ");
         }
+
+
+        if (Input.GetKeyUp(KeyCode.Q))
+        {
+            isPressed = false;
+        }
+        if (Input.GetKeyUp(KeyCode.W) && isPressed)
+        {
+            isPressed = false;
+        }
+        if (Input.GetKeyUp(KeyCode.S))
+        {
+            isPressed = false;
+        }
+
     }
 
     public void Sell(float money)
@@ -144,9 +205,18 @@ public class GameManager : MonoBehaviour
     }
     public void Water()
     {
-        Debug.Log("Watered");
+        //Debug.Log("Watered");
         mainFlower.water += mainFlower.watering;
         //play animation
+    }
+
+    public void buyFlower(string name)
+    {
+        if(Resources.Money <= mainFlower.flowerCost)
+        {
+            //mainFlower.changePlant();
+        }
+        
     }
 
     private void startBad()

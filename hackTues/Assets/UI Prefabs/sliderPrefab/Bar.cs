@@ -2,15 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[ExecuteInEditMode]
 public class Bar : MonoBehaviour
 {
     public int p = 100;
-    void Update()
-    {
-        SetBarPercent(p);
-    }
 
-    void SetBarPercent(float percent)
+
+    public void SetBarPercent(float percent)
     {
         if(percent > 100)
         {

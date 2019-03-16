@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using UnityEngine.UI;
 
 
 public class GameManager : MonoBehaviour
@@ -13,14 +14,24 @@ public class GameManager : MonoBehaviour
 
     private bool hatch;
 
+    public UIHandler ui;
     public GameObject flowerRoot;
 
+    public List<Sprite> buttonContractSprites;
     public FlowerLogic mainFlower;
     public float randomStart, randomEnd;
     public float powerOfEvents;
+    public ResearchManager ResearchMan;
+
+    [SerializeField]
+    private List<GameObject> uiStore;
+    [SerializeField]
+    private List<GameObject> uiContract;
 
     private void Start()
     {
+        populateUI();
+        //ResearchMan = gameObject.GetComponent<ResearchManager>();
         flowersInGame =  flowerRoot.GetComponentsInChildren<FlowerLogic>().ToList<FlowerLogic>();
         
         Invoke("startBad", UnityEngine.Random.Range(randomStart, randomEnd));
@@ -42,7 +53,7 @@ public class GameManager : MonoBehaviour
         set
         {
             hatch = value;
-            Debug.Log("set to: " + value);
+            //Debug.Log("set to: " + value);
             if (value == false)
             {
                 /*play animation*/
@@ -54,6 +65,8 @@ public class GameManager : MonoBehaviour
         }
     }
 
+
+
     void FixedUpdate()
     {
 
@@ -64,6 +77,8 @@ public class GameManager : MonoBehaviour
             badEvents[UnityEngine.Random.Range(0, 3)](10, mainFlower);
         }
 
+        Debug.Log(mainFlower);
+
         mainFlower.water -= mainFlower.waterDec * Time.deltaTime;
 
         if (HatchOpen && !mainFlower.nocturnal)
@@ -71,14 +86,30 @@ public class GameManager : MonoBehaviour
             mainFlower.sun += mainFlower.sunDec * Time.deltaTime;
         }
 
-        Debug.Log(mainFlower.sun.ToString());
-        Debug.Log(mainFlower.water.ToString());
+        //Debug.Log(mainFlower.sun.ToString());
+        //Debug.Log(mainFlower.water.ToString());
 
         if ((mainFlower.water <= 0 || mainFlower.water >= mainFlower.waterTolerance) || (mainFlower.sun <= 0 || mainFlower.sun >= mainFlower.SunTolerance))
         {
             Resources.Research += mainFlower.resOnDeath;
             //Destroy(gameObject);
         }
+    }
+
+    private void populateUI()
+    {
+        int random = UnityEngine.Random.Range(0, ResearchMan.resUnlock.Count);
+        Transform g = uiStore[0].transform.Find("GameObject").Find("Name");
+        
+        Text t = g.gameObject.GetComponent<Text>();
+        t.text = ResearchMan.resUnlock[random].flower.plantName;
+        g = uiStore[1].transform.Find("GameObject").Find("Cost");
+        t = g.gameObject.GetComponent<Text>();
+        float temp = ResearchMan.resUnlock[random].flower.flowerCost;
+        t.text = temp.ToString("N2");
+        
+
+        //uiStore[0]
     }
 
     private void keyPressing()

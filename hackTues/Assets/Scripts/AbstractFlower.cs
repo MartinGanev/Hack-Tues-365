@@ -15,6 +15,7 @@ public class AbstractFlower: MonoBehaviour
     public float soil_req;
     public float growTime;
     public float life;
+    public float flowerCost;
 
     protected int growStatus;
 

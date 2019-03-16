@@ -12,4 +12,5 @@ public class Research : MonoBehaviour
     public bool Locked;
     public bool Own;
     public int level;
+    public FlowerLogic flower;
 }

@@ -26,7 +26,7 @@ public class UIHandler : MonoBehaviour
         contractMenu.SetActive(false);
     }
 
-    void SetStoreItem(string name, int cost, string description, GameObject item)
+    public void SetStoreItem(string name, int cost, string description, GameObject item)
     {
         
 
@@ -47,7 +47,7 @@ public class UIHandler : MonoBehaviour
         }
     }
 
-    void AddContract(string name, int money, int research, string description)
+    public void SetContract(string name, int money, int research, string description)
     {
         GameObject newContract = Object.Instantiate(contractPrefab,new Vector3(),Quaternion.identity,contractContent.transform); 
 

@@ -18,8 +18,12 @@ public class FlowerLogic : AbstractFlower
     private void Start()
     {
         growStatus = 0;
-        changePlant("cactus");
-        Invoke("growSprite", growTime);
+        if(sprites != null)
+        {
+            changePlant("cactus");
+            Invoke("growSprite", growTime);
+        }
+        
     }
 
      //open to allow sun
@@ -43,6 +47,7 @@ public class FlowerLogic : AbstractFlower
     //iterate through the sprites every sprite time seconds
     private void growSprite()
     {
+        Debug.Log(index);
         if(index > (sprites.Count - 1))
         {
             return;

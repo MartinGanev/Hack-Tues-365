@@ -26,11 +26,11 @@ public class UIHandler : MonoBehaviour
         contractMenu.SetActive(false);
     }
 
-    void AddStoreItem(string name, int cost, string description)
+    void SetStoreItem(string name, int cost, string description, GameObject item)
     {
-        GameObject newStoreItem = Object.Instantiate(contractPrefab, new Vector3(), Quaternion.identity, storeContent.transform);
+        
 
-        foreach (Text text in newStoreItem.GetComponentsInChildren<Text>())
+        foreach (Text text in item.GetComponentsInChildren<Text>())
         {
             if (text.name == "Name")
             {

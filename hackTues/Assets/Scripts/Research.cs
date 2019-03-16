@@ -11,4 +11,5 @@ public class Research : MonoBehaviour
     public string Desc;
     public bool Locked;
     public bool Own;
+    public int level;
 }

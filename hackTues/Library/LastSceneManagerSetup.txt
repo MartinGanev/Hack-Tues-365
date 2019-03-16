@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/ui_scnene.unity
+- path: Assets/Scenes/logic.unity
   isLoaded: 1
   isActive: 1

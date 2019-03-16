@@ -7,6 +7,9 @@ TagManager:
   - cactus
   - tulip
   - sunflower
+  - CactusLogic
+  - TulipLogic
+  - SunflowerLogic
   layers:
   - Default
   - TransparentFX

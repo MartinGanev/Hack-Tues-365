@@ -4,20 +4,39 @@ using UnityEngine;
 
 public class FlowerLogic : AbstractFlower
 {
-    
-    private int growIndex = 0;
+    public int growIndex = 0;
 
     public Sprite empty;
     public int lifeTime = 10;
-    public List<Sprite> sprites;
+    public List<Sprite> spritesAlive;
+    public List<Sprite> spritesDead;
     public float resOnDeath;
     
 
+    public void Load(FlowerLogic flower)
+    {
+        this.plantName = flower.plantName;
+        this.sun = flower.sun;
+        this.sunTolerance = flower.sunTolerance;
+        this.sunDec = flower.sunDec;
 
+        this.water = flower.water;
+        this.waterTolerance = flower.waterTolerance;
+        this.waterDec = flower.waterDec;
+        this.watering = flower.watering;
+
+        this.rad = flower.rad;
+        this.radTolerance = flower.radTolerance;
+
+        this.spritesAlive = flower.spritesAlive;
+        this.spritesDead = flower.spritesDead;
+        this.growIndex = flower.growIndex;
+        this.empty = flower.empty;
+    }
 
     private void Start()
     {
-        if(sprites != null)
+        if(spritesAlive != null)
         {
             changePlant("cactus");
             Invoke("growSprite", growTime);
@@ -35,7 +54,8 @@ public class FlowerLogic : AbstractFlower
     //change the plant sprite
     public void changePlant(string plantTag)
     {
-        sprites = GameObject.FindGameObjectWithTag(plantTag).GetComponent<PlantGrow>().growAnima;
+        spritesAlive = GameObject.FindGameObjectWithTag(plantTag).GetComponent<PlantGrow>().growAnima;
+        spritesDead = GameObject.FindGameObjectWithTag(plantTag).GetComponent<PlantGrow>().deathAnima;
     }
 
     private void plantDry()
@@ -44,13 +64,43 @@ public class FlowerLogic : AbstractFlower
     //iterate through the sprites every sprite time seconds
     public void growSprite()
     {
+
         Debug.Log(growIndex);
-        if(growIndex > (sprites.Count - 1))
+        if(growIndex > (spritesAlive.Count - 1))
         {
+            if (life != 2)
+            {
+                if (life <0)
+                {
+                    return;
+                }
+                GetComponent<SpriteRenderer>().sprite = spritesDead[((growIndex - 1) * 2) + (1 - life)];
+                life--;
+                Invoke("growSprite", growTime);
+            }
             return;
         }
-        GetComponent<SpriteRenderer>().sprite = sprites[growIndex];
-        growIndex++;
+        if(life != 2)
+        {
+            if(life == 0)
+            {
+                return;
+            }
+            if(growIndex == 0)
+            {
+                GetComponent<SpriteRenderer>().sprite = empty;
+                return;
+            }
+            GetComponent<SpriteRenderer>().sprite = spritesDead[(growIndex * 2 - 1) + (1- life)];
+            life--;
+            return;
+        }
+        else
+        {
+            GetComponent<SpriteRenderer>().sprite = spritesAlive[growIndex];
+            growIndex++;
+        }
+
         Invoke("growSprite", growTime);
     }
 }

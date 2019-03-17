@@ -5,4 +5,6 @@ using UnityEngine;
 public class PlantGrow : MonoBehaviour
 {
     public List<Sprite> growAnima;
+
+    public List<Sprite> deathAnima;
 }

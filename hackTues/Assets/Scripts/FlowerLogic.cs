@@ -37,7 +37,6 @@ public class FlowerLogic : AbstractFlower
 
         changePlant(flower.plantName.ToLower());
         Invoke("growSprite", growTime);
-        gameObject.GetComponent<SpriteRenderer>().sprite = empty;
     }
 
     private void Start()

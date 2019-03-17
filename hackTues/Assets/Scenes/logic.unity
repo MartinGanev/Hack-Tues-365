@@ -1820,7 +1820,7 @@ PrefabInstance:
     - target: {fileID: 4920857348911190389, guid: 515d01f15793223449eea17441ca9684,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -492
       objectReference: {fileID: 0}
     - target: {fileID: 4920857348911190389, guid: 515d01f15793223449eea17441ca9684,
         type: 3}
@@ -1840,7 +1840,7 @@ PrefabInstance:
     - target: {fileID: 4920857348911190389, guid: 515d01f15793223449eea17441ca9684,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4920857348911190389, guid: 515d01f15793223449eea17441ca9684,
         type: 3}
@@ -1850,7 +1850,7 @@ PrefabInstance:
     - target: {fileID: 4920857348911190389, guid: 515d01f15793223449eea17441ca9684,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4920857348911190389, guid: 515d01f15793223449eea17441ca9684,
         type: 3}
@@ -2742,7 +2742,7 @@ PrefabInstance:
     - target: {fileID: 4920857348911190389, guid: 515d01f15793223449eea17441ca9684,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -301.75
       objectReference: {fileID: 0}
     - target: {fileID: 4920857348911190389, guid: 515d01f15793223449eea17441ca9684,
         type: 3}
@@ -2762,7 +2762,7 @@ PrefabInstance:
     - target: {fileID: 4920857348911190389, guid: 515d01f15793223449eea17441ca9684,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4920857348911190389, guid: 515d01f15793223449eea17441ca9684,
         type: 3}
@@ -2772,7 +2772,7 @@ PrefabInstance:
     - target: {fileID: 4920857348911190389, guid: 515d01f15793223449eea17441ca9684,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4920857348911190389, guid: 515d01f15793223449eea17441ca9684,
         type: 3}
@@ -9513,7 +9513,7 @@ PrefabInstance:
     - target: {fileID: 1571517504151983166, guid: e2164900595544741aaec951772ec96e,
         type: 3}
       propertyPath: growIndex
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1571517504151983165, guid: e2164900595544741aaec951772ec96e,
         type: 3}

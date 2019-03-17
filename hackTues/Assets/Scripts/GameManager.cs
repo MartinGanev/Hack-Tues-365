@@ -136,7 +136,7 @@ public class GameManager : MonoBehaviour
         if(Resources.Money >= flower.flowerCost)
         {
             mainFlower.Load(flower);
-            mainFlower.growSprite();
+            mainFlower.GetComponent<SpriteRenderer>().sprite = mainFlower.empty;
             populateUI();
         }
     }
@@ -148,9 +148,9 @@ public class GameManager : MonoBehaviour
         Transform g;
         Research unlockedRes;
 
-        int random = UnityEngine.Random.Range(0, ResearchMan.resUnlock.Count);
         for (int i = 0; i < uiStore.Count; i++)
-        {
+        { 
+            int random = UnityEngine.Random.Range(0, ResearchMan.resUnlock.Count);
             unlockedRes = ResearchMan.resUnlock[random];
              
             uiStore[i].transform.Find("GameObject").GetComponent<BuyHandler>().flower = unlockedRes.flower;
@@ -193,8 +193,8 @@ public class GameManager : MonoBehaviour
         if (Input.GetKey(KeyCode.S))
         {
             isPressed = true;
-            Sell(15);
-            Debug.Log("  ");
+            Sell(mainFlower.flowerCost/2);
+            Debug.Log("Sold" + mainFlower.plantName + " for " + mainFlower.flowerCost / 2);
         }
 
 
@@ -215,8 +215,11 @@ public class GameManager : MonoBehaviour
 
     public void Sell(float money)
     {
-        Resources.Money += money;
-        mainFlower.GetComponent<SpriteRenderer>().sprite = mainFlower.empty;
+        if (mainFlower.Grown)
+        {
+            Resources.Money += money;
+            mainFlower.GetComponent<SpriteRenderer>().sprite = mainFlower.empty;
+        }
     }
 
     public void Hatch()

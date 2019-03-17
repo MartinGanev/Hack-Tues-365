@@ -36,7 +36,8 @@ public class FlowerLogic : AbstractFlower
         this.empty = flower.empty;
 
         changePlant(flower.plantName.ToLower());
-
+        Invoke("growSprite", growTime);
+        gameObject.GetComponent<SpriteRenderer>().sprite = empty;
     }
 
     private void Start()
@@ -83,6 +84,7 @@ public class FlowerLogic : AbstractFlower
                 life--;
                 Invoke("growSprite", growTime);
             }
+            Grown = true;
             return;
         }
         if(life != 2)

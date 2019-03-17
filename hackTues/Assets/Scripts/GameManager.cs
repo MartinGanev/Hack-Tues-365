@@ -136,6 +136,8 @@ public class GameManager : MonoBehaviour
         if(Resources.Money >= flower.flowerCost)
         {
             mainFlower.Load(flower);
+            mainFlower.growSprite();
+            populateUI();
         }
     }
 

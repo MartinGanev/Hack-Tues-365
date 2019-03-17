@@ -20,6 +20,8 @@ public class FlowerLogic : AbstractFlower
         this.sunTolerance = flower.sunTolerance;
         this.sunDec = flower.sunDec;
 
+        this.life = flower.life;
+
         this.water = flower.water;
         this.waterTolerance = flower.waterTolerance;
         this.waterDec = flower.waterDec;
@@ -32,6 +34,9 @@ public class FlowerLogic : AbstractFlower
         this.spritesDead = flower.spritesDead;
         this.growIndex = flower.growIndex;
         this.empty = flower.empty;
+
+        changePlant(flower.plantName.ToLower());
+
     }
 
     private void Start()

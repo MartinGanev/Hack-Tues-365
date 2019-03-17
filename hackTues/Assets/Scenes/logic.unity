@@ -694,7 +694,7 @@ PrefabInstance:
     - target: {fileID: 4920857347399659012, guid: 515d01f15793223449eea17441ca9684,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4920857347399659012, guid: 515d01f15793223449eea17441ca9684,
         type: 3}
@@ -719,6 +719,31 @@ PrefabInstance:
     - target: {fileID: 4920857347399659012, guid: 515d01f15793223449eea17441ca9684,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4920857347399659012, guid: 515d01f15793223449eea17441ca9684,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4920857347399659012, guid: 515d01f15793223449eea17441ca9684,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4920857347399659012, guid: 515d01f15793223449eea17441ca9684,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1614641069}
+    - target: {fileID: 4920857347399659012, guid: 515d01f15793223449eea17441ca9684,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: CloseStore
+      objectReference: {fileID: 0}
+    - target: {fileID: 4920857347399659012, guid: 515d01f15793223449eea17441ca9684,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1977,7 +2002,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: 
 --- !u!222 &349492404
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2230,7 +2255,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: 
 --- !u!222 &446021501
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3587,7 +3612,7 @@ PrefabInstance:
     - target: {fileID: 4920857347399659012, guid: 515d01f15793223449eea17441ca9684,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4920857347399659012, guid: 515d01f15793223449eea17441ca9684,
         type: 3}
@@ -3612,6 +3637,31 @@ PrefabInstance:
     - target: {fileID: 4920857347399659012, guid: 515d01f15793223449eea17441ca9684,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4920857347399659012, guid: 515d01f15793223449eea17441ca9684,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4920857347399659012, guid: 515d01f15793223449eea17441ca9684,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4920857347399659012, guid: 515d01f15793223449eea17441ca9684,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1614641069}
+    - target: {fileID: 4920857347399659012, guid: 515d01f15793223449eea17441ca9684,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: CloseStore
+      objectReference: {fileID: 0}
+    - target: {fileID: 4920857347399659012, guid: 515d01f15793223449eea17441ca9684,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -4399,7 +4449,7 @@ PrefabInstance:
     - target: {fileID: 4920857347399659012, guid: 515d01f15793223449eea17441ca9684,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4920857347399659012, guid: 515d01f15793223449eea17441ca9684,
         type: 3}
@@ -4424,6 +4474,31 @@ PrefabInstance:
     - target: {fileID: 4920857347399659012, guid: 515d01f15793223449eea17441ca9684,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4920857347399659012, guid: 515d01f15793223449eea17441ca9684,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4920857347399659012, guid: 515d01f15793223449eea17441ca9684,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4920857347399659012, guid: 515d01f15793223449eea17441ca9684,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1614641069}
+    - target: {fileID: 4920857347399659012, guid: 515d01f15793223449eea17441ca9684,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: CloseStore
+      objectReference: {fileID: 0}
+    - target: {fileID: 4920857347399659012, guid: 515d01f15793223449eea17441ca9684,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4920857348500059994, guid: 515d01f15793223449eea17441ca9684,
@@ -5254,7 +5329,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 45}
-  m_SizeDelta: {x: 50, y: 50}
+  m_SizeDelta: {x: 50, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1156736272
 MonoBehaviour:
@@ -5342,8 +5417,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: bea02fa6c28983a4da17254ad3f63497, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -5507,7 +5582,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: 
 --- !u!222 &1172337193
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7326,7 +7401,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -64}
-  m_SizeDelta: {x: 50, y: 50}
+  m_SizeDelta: {x: 50, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1676444708
 MonoBehaviour:
@@ -7414,8 +7489,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 2f3a1f67aa22d3d4a88f67eb1b33e91c, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -8828,7 +8903,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 6.7999954, y: 0}
-  m_SizeDelta: {x: 50, y: 50}
+  m_SizeDelta: {x: 50, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2081802809
 MonoBehaviour:
@@ -8916,8 +8991,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: ad1504da865590242b89328f60e9718b, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -9255,6 +9330,11 @@ PrefabInstance:
       propertyPath: life
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1571517504151983166, guid: e2164900595544741aaec951772ec96e,
+        type: 3}
+      propertyPath: growIndex
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1571517504151983165, guid: e2164900595544741aaec951772ec96e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9589,6 +9669,122 @@ PrefabInstance:
       propertyPath: growAnima.Array.data[1]
       value: 
       objectReference: {fileID: 21300000, guid: dde93717db2d651408bd4a15959205f9,
+        type: 3}
+    - target: {fileID: 6388332853211479380, guid: 075b96a03fb426745bc5699e53fa4d7c,
+        type: 3}
+      propertyPath: growAnima.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6388332853211479380, guid: 075b96a03fb426745bc5699e53fa4d7c,
+        type: 3}
+      propertyPath: deathAnima.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6388332853211479380, guid: 075b96a03fb426745bc5699e53fa4d7c,
+        type: 3}
+      propertyPath: deathAnima.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 651ba28edbafd194d9a4ba71231624bb,
+        type: 3}
+    - target: {fileID: 6388332853211479380, guid: 075b96a03fb426745bc5699e53fa4d7c,
+        type: 3}
+      propertyPath: deathAnima.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 651ba28edbafd194d9a4ba71231624bb,
+        type: 3}
+    - target: {fileID: 6388332853211479380, guid: 075b96a03fb426745bc5699e53fa4d7c,
+        type: 3}
+      propertyPath: deathAnima.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 34e1dd9b1cfbc284eb3fc92de22d1908,
+        type: 3}
+    - target: {fileID: 6388332853211479380, guid: 075b96a03fb426745bc5699e53fa4d7c,
+        type: 3}
+      propertyPath: deathAnima.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: 34e1dd9b1cfbc284eb3fc92de22d1908,
+        type: 3}
+    - target: {fileID: 6388332853211479380, guid: 075b96a03fb426745bc5699e53fa4d7c,
+        type: 3}
+      propertyPath: deathAnima.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: 6359b470446537145a69fd322c852cb4,
+        type: 3}
+    - target: {fileID: 6388332853211479380, guid: 075b96a03fb426745bc5699e53fa4d7c,
+        type: 3}
+      propertyPath: deathAnima.Array.data[5]
+      value: 
+      objectReference: {fileID: 21300000, guid: 3d9b7c38e8733804da6acd018de5322e,
+        type: 3}
+    - target: {fileID: 6388332853211479380, guid: 075b96a03fb426745bc5699e53fa4d7c,
+        type: 3}
+      propertyPath: deathAnima.Array.data[6]
+      value: 
+      objectReference: {fileID: 21300000, guid: 3d9b7c38e8733804da6acd018de5322e,
+        type: 3}
+    - target: {fileID: 6388332853211479380, guid: 075b96a03fb426745bc5699e53fa4d7c,
+        type: 3}
+      propertyPath: deathAnima.Array.data[7]
+      value: 
+      objectReference: {fileID: 21300000, guid: 6890e9986aa439a4ca480910b779e755,
+        type: 3}
+    - target: {fileID: 6388332853340233674, guid: 075b96a03fb426745bc5699e53fa4d7c,
+        type: 3}
+      propertyPath: growAnima.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6388332853340233674, guid: 075b96a03fb426745bc5699e53fa4d7c,
+        type: 3}
+      propertyPath: deathAnima.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6388332853340233674, guid: 075b96a03fb426745bc5699e53fa4d7c,
+        type: 3}
+      propertyPath: deathAnima.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: d11f02e343ae3b5449130a8d36609dd7,
+        type: 3}
+    - target: {fileID: 6388332853340233674, guid: 075b96a03fb426745bc5699e53fa4d7c,
+        type: 3}
+      propertyPath: deathAnima.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: d11f02e343ae3b5449130a8d36609dd7,
+        type: 3}
+    - target: {fileID: 6388332853340233674, guid: 075b96a03fb426745bc5699e53fa4d7c,
+        type: 3}
+      propertyPath: deathAnima.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 2d32b91f75826f248927421846279b6e,
+        type: 3}
+    - target: {fileID: 6388332853340233674, guid: 075b96a03fb426745bc5699e53fa4d7c,
+        type: 3}
+      propertyPath: deathAnima.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: 2d32b91f75826f248927421846279b6e,
+        type: 3}
+    - target: {fileID: 6388332853340233674, guid: 075b96a03fb426745bc5699e53fa4d7c,
+        type: 3}
+      propertyPath: deathAnima.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: 97fd5574508d13a4ebced830eb9bafce,
+        type: 3}
+    - target: {fileID: 6388332853340233674, guid: 075b96a03fb426745bc5699e53fa4d7c,
+        type: 3}
+      propertyPath: deathAnima.Array.data[5]
+      value: 
+      objectReference: {fileID: 21300000, guid: b228d4a1b49664445856e8cf720e603e,
+        type: 3}
+    - target: {fileID: 6388332853340233674, guid: 075b96a03fb426745bc5699e53fa4d7c,
+        type: 3}
+      propertyPath: deathAnima.Array.data[6]
+      value: 
+      objectReference: {fileID: 21300000, guid: 139f01a5c040d104580202270270f286,
+        type: 3}
+    - target: {fileID: 6388332853340233674, guid: 075b96a03fb426745bc5699e53fa4d7c,
+        type: 3}
+      propertyPath: deathAnima.Array.data[7]
+      value: 
+      objectReference: {fileID: 21300000, guid: 67df764e1f600f240ad58c2eb3b1e0e2,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 075b96a03fb426745bc5699e53fa4d7c, type: 3}
@@ -10199,6 +10395,56 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: a090b28850c45ec428dbb3d667050ca2,
         type: 3}
+    - target: {fileID: 7718057152227943626, guid: 536180f76dd0bba46b0e488e49a15134,
+        type: 3}
+      propertyPath: sun
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7718057152227943626, guid: 536180f76dd0bba46b0e488e49a15134,
+        type: 3}
+      propertyPath: sunDec
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7718057152227943626, guid: 536180f76dd0bba46b0e488e49a15134,
+        type: 3}
+      propertyPath: water
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 7718057152227943626, guid: 536180f76dd0bba46b0e488e49a15134,
+        type: 3}
+      propertyPath: waterTolerance
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 7718057152227943626, guid: 536180f76dd0bba46b0e488e49a15134,
+        type: 3}
+      propertyPath: waterDec
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7718057152227943626, guid: 536180f76dd0bba46b0e488e49a15134,
+        type: 3}
+      propertyPath: watering
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7718057152227943626, guid: 536180f76dd0bba46b0e488e49a15134,
+        type: 3}
+      propertyPath: sunTolerance
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7718057152227943626, guid: 536180f76dd0bba46b0e488e49a15134,
+        type: 3}
+      propertyPath: growTime
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7718057152227943626, guid: 536180f76dd0bba46b0e488e49a15134,
+        type: 3}
+      propertyPath: life
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7718057152227943626, guid: 536180f76dd0bba46b0e488e49a15134,
+        type: 3}
+      propertyPath: flowerCost
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7718057152316824016, guid: 536180f76dd0bba46b0e488e49a15134,
         type: 3}
       propertyPath: empty
@@ -10224,6 +10470,56 @@ PrefabInstance:
         type: 3}
       propertyPath: resOnDeath
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7718057152316824016, guid: 536180f76dd0bba46b0e488e49a15134,
+        type: 3}
+      propertyPath: sun
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7718057152316824016, guid: 536180f76dd0bba46b0e488e49a15134,
+        type: 3}
+      propertyPath: sunDec
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7718057152316824016, guid: 536180f76dd0bba46b0e488e49a15134,
+        type: 3}
+      propertyPath: sunTolerance
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7718057152316824016, guid: 536180f76dd0bba46b0e488e49a15134,
+        type: 3}
+      propertyPath: water
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 7718057152316824016, guid: 536180f76dd0bba46b0e488e49a15134,
+        type: 3}
+      propertyPath: waterTolerance
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 7718057152316824016, guid: 536180f76dd0bba46b0e488e49a15134,
+        type: 3}
+      propertyPath: waterDec
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7718057152316824016, guid: 536180f76dd0bba46b0e488e49a15134,
+        type: 3}
+      propertyPath: watering
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7718057152316824016, guid: 536180f76dd0bba46b0e488e49a15134,
+        type: 3}
+      propertyPath: life
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7718057152316824016, guid: 536180f76dd0bba46b0e488e49a15134,
+        type: 3}
+      propertyPath: growTime
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7718057152316824016, guid: 536180f76dd0bba46b0e488e49a15134,
+        type: 3}
+      propertyPath: flowerCost
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 7718057152798833030, guid: 536180f76dd0bba46b0e488e49a15134,
         type: 3}
@@ -10333,6 +10629,56 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 401a7003828c0f84cb220f959dd97dfc,
         type: 3}
+    - target: {fileID: 7718057152798833030, guid: 536180f76dd0bba46b0e488e49a15134,
+        type: 3}
+      propertyPath: sun
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 7718057152798833030, guid: 536180f76dd0bba46b0e488e49a15134,
+        type: 3}
+      propertyPath: sunDec
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7718057152798833030, guid: 536180f76dd0bba46b0e488e49a15134,
+        type: 3}
+      propertyPath: sunTolerance
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 7718057152798833030, guid: 536180f76dd0bba46b0e488e49a15134,
+        type: 3}
+      propertyPath: water
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7718057152798833030, guid: 536180f76dd0bba46b0e488e49a15134,
+        type: 3}
+      propertyPath: waterDec
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7718057152798833030, guid: 536180f76dd0bba46b0e488e49a15134,
+        type: 3}
+      propertyPath: waterTolerance
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7718057152798833030, guid: 536180f76dd0bba46b0e488e49a15134,
+        type: 3}
+      propertyPath: watering
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7718057152798833030, guid: 536180f76dd0bba46b0e488e49a15134,
+        type: 3}
+      propertyPath: growTime
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7718057152798833030, guid: 536180f76dd0bba46b0e488e49a15134,
+        type: 3}
+      propertyPath: life
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7718057152798833030, guid: 536180f76dd0bba46b0e488e49a15134,
+        type: 3}
+      propertyPath: flowerCost
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7718057154302412770, guid: 536180f76dd0bba46b0e488e49a15134,
         type: 3}
       propertyPath: empty

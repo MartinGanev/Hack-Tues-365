@@ -135,6 +135,7 @@ public class GameManager : MonoBehaviour
     {
         if(Resources.Money >= flower.flowerCost)
         {
+            Resources.Money -= flower.flowerCost;
             mainFlower.Load(flower);
             mainFlower.GetComponent<SpriteRenderer>().sprite = mainFlower.empty;
             populateUI();

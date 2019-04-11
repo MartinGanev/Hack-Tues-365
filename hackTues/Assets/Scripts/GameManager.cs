@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     private float waitTime = 0f;
     private List<FlowerLogic> flowersInGame = new List<FlowerLogic>();
     private bool isPressed;
+    private float waterTarget = 0;
 
     private bool hatch;
 
@@ -105,6 +106,14 @@ public class GameManager : MonoBehaviour
                 }
             }
 
+            if(mainFlower.water <= waterTarget)
+            {
+                mainFlower.water++;
+            }
+            else
+            {
+                waterTarget = 0;
+            }
 
             // Debug.Log(mainFlower.sun.ToString());
             // Debug.Log(mainFlower.water.ToString());
@@ -230,7 +239,7 @@ public class GameManager : MonoBehaviour
     public void Water()
     {
         //Debug.Log("Watered");
-        mainFlower.water += mainFlower.watering;
+        this.waterTarget += mainFlower.watering + mainFlower.water;
         //play animation
     }
 

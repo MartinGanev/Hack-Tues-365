@@ -63,9 +63,6 @@ public class FlowerLogic : AbstractFlower
         spritesDead = GameObject.FindGameObjectWithTag(plantTag).GetComponent<PlantGrow>().deathAnima;
     }
 
-    private void plantDry()
-    {    }
-
     //iterate through the sprites every sprite time seconds
     public void growSprite()
     {
@@ -90,6 +87,7 @@ public class FlowerLogic : AbstractFlower
         {
             if(life == 0)
             {
+                Resources.Research += resOnDeath;
                 return;
             }
             if(growIndex == 0)

@@ -4,6 +4,6 @@ using UnityEngine;
 
 public static class Resources
 {
-    public static float Money = 100;
-    public static float Research = 100;
+    public static float Money = 20;
+    public static float Research = 0;
 }

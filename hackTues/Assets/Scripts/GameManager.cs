@@ -18,22 +18,29 @@ public class GameManager : MonoBehaviour
     private List<FlowerLogic> flowersInGame = new List<FlowerLogic>();
     private bool isPressed;
     private float waterTarget = 0;
-
+  
     private bool hatch;
 
+    //time variables
+    public int timeScale = 1;
+    public Time gametime;
+
+    //main gameObject variables
     public GameObject mainObject;
     public UIHandler ui;
     public GameObject flowerRoot;
 
+
     public List<Sprite> buttonContractSprites;
   
+    //main logic variables
     public FlowerLogic mainFlower;
     public float randomStart, randomEnd;
     public float powerOfEvents;
     public ResearchManager ResearchMan;
 
 
-
+    //ui variables
     [SerializeField]
     private List<GameObject> uiStore;
     [SerializeField]
@@ -53,6 +60,7 @@ public class GameManager : MonoBehaviour
         new Action<float, FlowerLogic>(StaticEvents.MeteorShower),
         new Action<float, FlowerLogic>(StaticEvents.SuperNova)
     };
+
 
     public bool HatchOpen
     {
@@ -76,11 +84,9 @@ public class GameManager : MonoBehaviour
         }
     }
     
-
+    //Update func
     void FixedUpdate()
-    {
-
-
+    { 
         waitTime += Time.deltaTime;
 
         if (mainFlower.life >= 2)
@@ -135,10 +141,12 @@ public class GameManager : MonoBehaviour
         }
     }
 
+
     private float toPercent(float current, float max)
     {
         return current / max * 100;
     }
+
 
     public void buyFlower(FlowerLogic flower)
     {
@@ -150,6 +158,7 @@ public class GameManager : MonoBehaviour
             populateUI();
         }
     }
+
 
     private void populateUI()
     {
@@ -184,6 +193,7 @@ public class GameManager : MonoBehaviour
         //uiStore[0]
     }
 
+    //Key press functions
     private void keyPressing()
     {
 

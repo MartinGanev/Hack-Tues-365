@@ -5,5 +5,5 @@ using UnityEngine;
 public static class Resources
 {
     public static float Money = 20;
-    public static float Research = 0;
+    public static float Research = 1000;
 }
